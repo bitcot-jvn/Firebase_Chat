@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A1E30771-C0DF-482A-84DC-6D8DDB9534DC"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "80D712A7-D608-469C-B020-5C9CE81A11FF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FirebaseRealTimeCharPOC/Controller/LoginVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "setSocialLogin()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CD2A6DD8-3E89-43D2-A3FD-BDF231D83885"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FirebaseRealTimeCharPOC/Controller/LoginVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "setSocialLogin()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C45168DA-BA16-4798-BAF3-1DFF4C993DD1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FirebaseRealTimeCharPOC/Controller/LoginVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "setSocialLogin()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "140722D2-6B23-49E0-B3FF-ABF486CBC70F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FirebaseRealTimeCharPOC/Controller/LoginVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "logInFireBase(credential:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C102EA00-E625-4BBE-8584-A1A221ACE9DD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FirebaseRealTimeCharPOC/Controller/LoginVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "logInFireBase(credential:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D2B1369-A8A5-455E-9CBE-22A61CA8DA3A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FirebaseRealTimeCharPOC/Controller/LoginVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "logInFireBase(credential:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0D2B1369-A8A5-455E-9CBE-22A61CA8DA3A - f13697d0421f6aa0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FirebaseRealTimeCharPOC.LoginVC.logInFireBase(credential: __C.FIRAuthCredential) -&gt; ()"
+                  moduleName = "FirebaseRealTimeCharPOC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bitcottechnologies/Documents/Projects/FirebaseRealTimeCharPOC/FirebaseRealTimeCharPOC/Controller/LoginVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "670">
+               </Location>
+               <Location
+                  uuid = "0D2B1369-A8A5-455E-9CBE-22A61CA8DA3A - f13697d0421f6aa0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FirebaseRealTimeCharPOC.LoginVC.logInFireBase(credential: __C.FIRAuthCredential) -&gt; ()"
+                  moduleName = "FirebaseRealTimeCharPOC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bitcottechnologies/Documents/Projects/FirebaseRealTimeCharPOC/FirebaseRealTimeCharPOC/Controller/LoginVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "777">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

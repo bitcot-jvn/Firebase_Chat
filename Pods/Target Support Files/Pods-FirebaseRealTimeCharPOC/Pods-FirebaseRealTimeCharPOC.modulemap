@@ -1,0 +1,6 @@
+framework module Pods_FirebaseRealTimeCharPOC {
+  umbrella header "Pods-FirebaseRealTimeCharPOC-umbrella.h"
+
+  export *
+  module * { export * }
+}
