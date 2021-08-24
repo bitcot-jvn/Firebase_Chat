@@ -32,15 +32,15 @@ extension UINavigationItem {
         
         let one = UILabel()
         one.text = title
-        one.font = UIFont.systemFont(ofSize: 17)
+        one.font = UIFont(name: "Raleway-SemiBold", size: 17)
         one.sizeToFit()
-        
+        one.textColor = .white
         let two = UILabel()
         two.text = subtitle
-        two.font = UIFont.systemFont(ofSize: 12)
+        two.font = UIFont(name: "Raleway-Regular", size: 12)
         two.textAlignment = .center
         two.sizeToFit()
-        
+        two.textColor = .white
         let stackView = UIStackView(arrangedSubviews: [one, two])
         stackView.distribution = .equalCentering
         stackView.axis = .vertical

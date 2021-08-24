@@ -16,13 +16,12 @@ import FirebaseAuth
 import SDWebImage
 import MBCircularProgressBar
 
-
 //MARK: UIImagePickerControllerDelegate,UINavigationControllerDelegate
 extension ChatVC: UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
     func addCameraBarButton() {
         let cameraItem = InputBarButtonItem(type: .system)
-        cameraItem.tintColor = .black
+        cameraItem.tintColor = .white
         cameraItem.image = UIImage(systemName: "camera")
         cameraItem.addTarget(
             self,
@@ -52,21 +51,20 @@ extension ChatVC: UIImagePickerControllerDelegate,UINavigationControllerDelegate
         didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]
     ) {
         picker.dismiss(animated: true)
-        
-//        if let asset = info[.phAsset] as? PHAsset {
-//            let size = CGSize(width: 500, height: 500)
-//            PHImageManager.default().requestImage(
-//                for: asset,
-//                targetSize: size,
-//                contentMode: .aspectFit,
-//                options: nil
-//            ) { result, _ in
-//                guard let image = result else {
-//                    return
-//                }
-//                self.sendPhoto(image)
-//            }
-//        } else
+        //        if let asset = info[.phAsset] as? PHAsset {
+        //            let size = CGSize(width: 500, height: 500)
+        //            PHImageManager.default().requestImage(
+        //                for: asset,
+        //                targetSize: size,
+        //                contentMode: .aspectFit,
+        //                options: nil
+        //            ) { result, _ in
+        //                guard let image = result else {
+        //                    return
+        //                }
+        //                self.sendPhoto(image)
+        //            }
+        //        } else
         if let image = info[.originalImage] as? UIImage {
             sendPhoto(image)
         }else if let video = info[.mediaURL] as? URL{
@@ -99,7 +97,7 @@ extension ChatVC: UIImagePickerControllerDelegate,UINavigationControllerDelegate
         let data = try? Data(contentsOf: video)
         let imageReference = storage.child("\(channelId)/\(name)")
         self.uploadeImageVideoProgress.isHidden = false
-       let uploadTask = imageReference.putData(data!, metadata: metadata) { _, _ in
+        let uploadTask = imageReference.putData(data!, metadata: metadata) { _, _ in
             imageReference.downloadURL { url, error in
                 self.uploadeImageVideoProgress.isHidden = true
                 guard let url = url else{
@@ -117,7 +115,7 @@ extension ChatVC: UIImagePickerControllerDelegate,UINavigationControllerDelegate
             print("uploade video Progress:==",snapshot.progress?.fractionCompleted as Any)
             self.uploadeImageVideoProgress.progress = Float(snapshot.progress!.fractionCompleted)
         }
-
+        
     }
     
     private func uploadImage(
@@ -156,11 +154,10 @@ extension ChatVC: UIImagePickerControllerDelegate,UINavigationControllerDelegate
     func setImage(imgUrl: URL, imageType: String = "", progressBar: MBCircularProgressBarView = MBCircularProgressBarView(), closer: ((UIImage)-> Void)? = nil) {
         var Newimage = UIImage()
         if  SDImageCache.shared.diskImageDataExists(withKey: "\(imgUrl)"){
-                    progressBar.isHidden = true
+            progressBar.isHidden = true
             closer?(SDImageCache.shared.imageFromDiskCache(forKey: "\(imgUrl)") ?? #imageLiteral(resourceName: "icons8-full-image-64"))
         }else{
             SDWebImageDownloader.shared.downloadImage(with: imgUrl, options: .lowPriority) { receivedSize, expectedSize, url in
-                
                 DispatchQueue.main.async {
                     progressBar.isHidden = false
                     progressBar.value = CGFloat(receivedSize)
@@ -176,16 +173,14 @@ extension ChatVC: UIImagePickerControllerDelegate,UINavigationControllerDelegate
                             closer?(Newimage)
                         }
                     }
-                    
                 }else{
                     progressBar.isHidden = false
                     Newimage = #imageLiteral(resourceName: "icons8-full-image-64")
+                }
             }
+            
         }
-
+        
     }
-    
-}
-    
-    
+   
 }

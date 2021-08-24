@@ -139,9 +139,9 @@ open class MessagesCollectionViewFlowLayout: UICollectionViewFlowLayout {
 
     // MARK: - Layout Invalidation
 
-    open override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
-        return collectionView?.bounds.width != newBounds.width
-    }
+//    open override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+//        return collectionView?.bounds.width != newBounds.width
+//    }
 
     open override func invalidationContext(forBoundsChange newBounds: CGRect) -> UICollectionViewLayoutInvalidationContext {
         let context = super.invalidationContext(forBoundsChange: newBounds)

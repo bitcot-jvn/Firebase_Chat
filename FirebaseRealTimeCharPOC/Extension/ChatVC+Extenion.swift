@@ -14,18 +14,37 @@ import SDWebImage
 
 // MARK: - MessagesDisplayDelegate
 extension ChatVC: MessagesDisplayDelegate {
+    
     func backgroundColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
         return isFromCurrentSender(message: message) ? .primary : .incomingMessage
     }
     
     func textColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
-        return isFromCurrentSender(message: message) ? .white : .lightGray
+        return isFromCurrentSender(message: message) ? .white : #colorLiteral(red: 0.1561771631, green: 0.1867688, blue: 0.3026349545, alpha: 1)
+    }
+
+    func headerViewSize(for section: Int, in messagesCollectionView: MessagesCollectionView) -> CGSize {
+        let size = CGSize(width: messagesCollectionView.frame.width, height: 30)
+            if section == 0 {
+              return size
+            }
+            let currentIndexPath = IndexPath(row: 0, section: section)
+            let lastIndexPath = IndexPath(row: 0, section: section - 1)
+            let lastMessage = messageForItem(at: lastIndexPath, in: messagesCollectionView)
+            let currentMessage = messageForItem(at: currentIndexPath, in: messagesCollectionView)
+            if currentMessage.sentDate.isInSameDayOf(date: lastMessage.sentDate) {
+              return .zero
+            }
+
+            return size
     }
     
-    
-    func shouldDisplayHeader(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> Bool {
-        return false
+    func messageHeaderView(for indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageReusableView {
+        let header = messagesCollectionView.dequeueReusableHeaderView(MessageDateHeaderView.self, for: indexPath)
+        header.lblDate?.text = MessageKitDateFormatter.shared.string(from: messages[indexPath.section].sentDate)
+        return header
     }
+       
     
     func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
         avatarView.isHidden = true
@@ -46,18 +65,36 @@ extension ChatVC: MessagesLayoutDelegate {
     func messageTopLabelHeight(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
         return 0
     }
-
+    
     func messageBottomLabelAttributedText(for message: MessageKit.MessageType, at indexPath: IndexPath) -> NSAttributedString? {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd MMM, YYYY"
+        formatter.dateFormat = "hh:mm a"
         let dateString = formatter.string(from: message.sentDate)
-        return NSAttributedString(string: dateString, attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption2)])
+        if isFromCurrentSender(message: message){
+            return NSAttributedString(string: dateString, attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption2),NSAttributedString.Key.foregroundColor: UIColor.white])
+        }else{
+            return NSAttributedString(string: dateString, attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption2),NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+        }
+        
     }
     
     func messageBottomLabelHeight(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
         return 20
     }
     
+    func textCellSizeCalculator(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CellSizeCalculator? {
+       return self.textMessageSizeCalculator
+   }
+    
+    func cellBottomLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
+        if isFromCurrentSender(message: message){
+            //✓✓ //✓✓ //✓
+            return NSAttributedString(string: "✓✓", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 10), NSAttributedString.Key.foregroundColor: UIColor.white])
+        }else{
+            return NSAttributedString(string: "", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 10), NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+        }
+       
+    }
 }
 
 // MARK: - MessagesDataSource
@@ -74,16 +111,40 @@ extension ChatVC: MessagesDataSource {
         return messages[indexPath.section]
     }
     
+    func textCell(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UICollectionViewCell? {
+        let cell = messagesCollectionView.dequeueReusableCell(CustomTextMessageContentCell.self,
+                                                              for: indexPath)
+        cell.configure(with: message,
+                       at: indexPath,
+                       in: messagesCollectionView,
+                       dataSource: self,
+                       and: self.textMessageSizeCalculator)
+        
+        return cell
+    }
+    
+    func photoCell(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UICollectionViewCell? {
+        let cell = messagesCollectionView.dequeueReusableCell(CustomTextMessageContentCell.self,
+                                                              for: indexPath)
+        cell.configure(with: message,
+                       at: indexPath,
+                       in: messagesCollectionView,
+                       dataSource: self,
+                       and: self.textMessageSizeCalculator)
+
+        return cell
+    }
+
     func configureMediaMessageImageView(_ imageView: UIImageView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
+        
         guard let msg = message as? Message, let url = msg.downloadURL else { return}
-        imageView.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
         imageView.image = #imageLiteral(resourceName: "icons8-full-image-64")
         imageView.contentMode = .scaleAspectFill
         let progressBar = MBCircularProgressBarView(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
         progressBar.backgroundColor = .clear
         progressBar.progressAngle = 95
         progressBar.progressColor = .white
-        progressBar.progressStrokeColor = .darkGray
+        progressBar.progressStrokeColor = .gray
         progressBar.showValueString = false
         progressBar.progressLineWidth = 3.0
         imageView.addSubview(progressBar)
@@ -105,7 +166,6 @@ extension ChatVC: MessagesDataSource {
         }else{
             self.setImage(imgUrl: url, imageType: msg.mediaType!, progressBar: progressBar) { image in
                 imageView.image = image
-                print(imageView)
                 progressBar.removeFromSuperview()
                 self.setPlayBtn(imageView).removeFromSuperview()
             }
@@ -158,7 +218,8 @@ extension ChatVC: MessagesDataSource {
 }
 
 extension ChatVC: MessageCellDelegate{
-    func didTapImage(in cell: MessageCollectionViewCell) {
+
+    func didTapMessage(in cell: MessageCollectionViewCell) {
         if let indexPath = messagesCollectionView.indexPath(for: cell) {
             let message = messages[indexPath.section]
             if message.mediaType == mediaTypeIs.video.rawValue{
@@ -180,6 +241,7 @@ extension ChatVC: MessageCellDelegate{
             }
         }
     }
+    
     
     func imageTapped(image: UIImage){
         
@@ -204,3 +266,4 @@ extension ChatVC: MessageCellDelegate{
     }
     
 }
+

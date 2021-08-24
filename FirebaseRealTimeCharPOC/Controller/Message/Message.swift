@@ -32,12 +32,14 @@ struct Message: MessageType {
     var image: UIImage?
     var downloadURL: URL?
     var typingUserIs: String?
+    var read: Bool?
     
-    init(user: User, content: String, is_typing: Bool, typingUserIs: String) {
+    init(user: User, content: String, is_typing: Bool, typingUserIs: String,read: Bool) {
         sender = Sender(senderId: user.uid, displayName: user.email!)
         self.content = content
         self.is_typing = is_typing
         self.typingUserIs = typingUserIs
+        self.read = read
         sentDate = Date()
         id = nil
     }
@@ -61,12 +63,12 @@ struct Message: MessageType {
         else {
             return nil
         }
-        
         id = document.documentID
         self.sentDate = sentDate.dateValue()
         sender = Sender(senderId: senderId, displayName: senderName)
         self.mediaType = data["mediaType"] as? String
         self.is_typing = data["is_typing"] as? Bool
+        self.read = data["read"] as? Bool
         self.typingUserIs = data["typingUserIs"] as? String
         if let content = data["content"] as? String {
             self.content = content

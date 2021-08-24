@@ -8,6 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		3079D931CC82FD8C0A578BB3 /* Pods_FirebaseRealTimeCharPOCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA8AEE1977327CA12485855 /* Pods_FirebaseRealTimeCharPOCTests.framework */; };
+		9511389F26D3D3D800B02888 /* spinwerad.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9511388626D3D3D700B02888 /* spinwerad.ttf */; };
+		951138A226D3D3D800B02888 /* spinweradC.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9511388926D3D3D700B02888 /* spinweradC.ttf */; };
+		951138A326D3D3D800B02888 /* Raleway-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9511388B26D3D3D700B02888 /* Raleway-BoldItalic.ttf */; };
+		951138A426D3D3D800B02888 /* Raleway-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9511388C26D3D3D700B02888 /* Raleway-MediumItalic.ttf */; };
+		951138A526D3D3D800B02888 /* Raleway-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9511388D26D3D3D700B02888 /* Raleway-ThinItalic.ttf */; };
+		951138A626D3D3D800B02888 /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9511388E26D3D3D700B02888 /* Raleway-ExtraLight.ttf */; };
+		951138A726D3D3D800B02888 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9511388F26D3D3D700B02888 /* SIL Open Font License.txt */; };
+		951138A926D3D3D800B02888 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9511389126D3D3D700B02888 /* Raleway-SemiBold.ttf */; };
+		951138AA26D3D3D800B02888 /* Raleway-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9511389226D3D3D700B02888 /* Raleway-ExtraBold.ttf */; };
+		951138AB26D3D3D800B02888 /* Raleway-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9511389326D3D3D700B02888 /* Raleway-ExtraBoldItalic.ttf */; };
+		951138AC26D3D3D800B02888 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9511389426D3D3D700B02888 /* Raleway-Regular.ttf */; };
+		951138AD26D3D3D800B02888 /* Raleway-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9511389526D3D3D700B02888 /* Raleway-ExtraLightItalic.ttf */; };
+		951138AE26D3D3D800B02888 /* Raleway-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9511389626D3D3D700B02888 /* Raleway-SemiBoldItalic.ttf */; };
+		951138AF26D3D3D800B02888 /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9511389726D3D3D700B02888 /* Raleway-Light.ttf */; };
+		951138B026D3D3D800B02888 /* Raleway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9511389826D3D3D700B02888 /* Raleway-Black.ttf */; };
+		951138B126D3D3D800B02888 /* Raleway-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9511389926D3D3D700B02888 /* Raleway-BlackItalic.ttf */; };
+		951138B226D3D3D800B02888 /* Raleway-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9511389A26D3D3D700B02888 /* Raleway-LightItalic.ttf */; };
+		951138B326D3D3D800B02888 /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9511389B26D3D3D700B02888 /* Raleway-Thin.ttf */; };
+		951138B426D3D3D800B02888 /* Raleway.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9511389C26D3D3D700B02888 /* Raleway.zip */; };
+		951138B526D3D3D800B02888 /* Raleway-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9511389D26D3D3D700B02888 /* Raleway-Italic.ttf */; };
+		951138B626D3D3D800B02888 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9511389E26D3D3D700B02888 /* Raleway-Bold.ttf */; };
+		9535108A26CE6F7500A7EFB7 /* CustomTextMessageContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535108926CE6F7500A7EFB7 /* CustomTextMessageContentCell.swift */; };
+		9535108C26CE705300A7EFB7 /* CustomMessageContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535108B26CE705200A7EFB7 /* CustomMessageContentCell.swift */; };
+		9535108E26CE70A500A7EFB7 /* CustomLayoutSizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535108D26CE70A500A7EFB7 /* CustomLayoutSizeCalculator.swift */; };
+		9535109026CE70DE00A7EFB7 /* CustomTextLayoutSizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535108F26CE70DE00A7EFB7 /* CustomTextLayoutSizeCalculator.swift */; };
 		95697D3A26C65632000495A2 /* image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95697D3926C65632000495A2 /* image.swift */; };
 		9579AD0226C2895800F12CE8 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9579AD0126C2895800F12CE8 /* Constant.swift */; };
 		9579AD0426C291D600F12CE8 /* ChatVC+Extenion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9579AD0326C291D600F12CE8 /* ChatVC+Extenion.swift */; };
@@ -30,6 +55,9 @@
 		959CF1F926C1A9DF00D5F285 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959CF1F826C1A9DF00D5F285 /* Message.swift */; };
 		959CF1FB26C1B29400D5F285 /* CollectionView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959CF1FA26C1B29400D5F285 /* CollectionView+Addition.swift */; };
 		959CF1FE26C1B32F00D5F285 /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959CF1FD26C1B32F00D5F285 /* UIColor+Additions.swift */; };
+		95D52CB826D4CB6C00537F7D /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9511389026D3D3D700B02888 /* Raleway-Medium.ttf */; };
+		95FD3B1626CCE3500092B68A /* MessageDateHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FD3B1526CCE3500092B68A /* MessageDateHeaderView.swift */; };
+		95FD3B1826CCE4670092B68A /* MessageDateHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95FD3B1726CCE4670092B68A /* MessageDateHeaderView.xib */; };
 		A86B219EBB1EA05CC61C4129 /* Pods_FirebaseRealTimeCharPOC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0847042888604E5DE4BC9D02 /* Pods_FirebaseRealTimeCharPOC.framework */; };
 		D4777E4428D686633E213ED9 /* Pods_FirebaseRealTimeCharPOC_FirebaseRealTimeCharPOCUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC688B258764429ACF83B8D6 /* Pods_FirebaseRealTimeCharPOC_FirebaseRealTimeCharPOCUITests.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +84,33 @@
 		27949A04F8C90EE405AEF8FC /* Pods-FirebaseRealTimeCharPOCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseRealTimeCharPOCTests.release.xcconfig"; path = "Target Support Files/Pods-FirebaseRealTimeCharPOCTests/Pods-FirebaseRealTimeCharPOCTests.release.xcconfig"; sourceTree = "<group>"; };
 		4583C925C62F55805141FBE0 /* Pods-FirebaseRealTimeCharPOC-FirebaseRealTimeCharPOCUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseRealTimeCharPOC-FirebaseRealTimeCharPOCUITests.release.xcconfig"; path = "Target Support Files/Pods-FirebaseRealTimeCharPOC-FirebaseRealTimeCharPOCUITests/Pods-FirebaseRealTimeCharPOC-FirebaseRealTimeCharPOCUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6580541F145A3B10DAA59F38 /* Pods-FirebaseRealTimeCharPOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseRealTimeCharPOC.release.xcconfig"; path = "Target Support Files/Pods-FirebaseRealTimeCharPOC/Pods-FirebaseRealTimeCharPOC.release.xcconfig"; sourceTree = "<group>"; };
+		9511388626D3D3D700B02888 /* spinwerad.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = spinwerad.ttf; sourceTree = "<group>"; };
+		9511388726D3D3D700B02888 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
+		9511388926D3D3D700B02888 /* spinweradC.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = spinweradC.ttf; sourceTree = "<group>"; };
+		9511388B26D3D3D700B02888 /* Raleway-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-BoldItalic.ttf"; sourceTree = "<group>"; };
+		9511388C26D3D3D700B02888 /* Raleway-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-MediumItalic.ttf"; sourceTree = "<group>"; };
+		9511388D26D3D3D700B02888 /* Raleway-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ThinItalic.ttf"; sourceTree = "<group>"; };
+		9511388E26D3D3D700B02888 /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
+		9511388F26D3D3D700B02888 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
+		9511389026D3D3D700B02888 /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Medium.ttf"; sourceTree = "<group>"; };
+		9511389126D3D3D700B02888 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		9511389226D3D3D700B02888 /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
+		9511389326D3D3D700B02888 /* Raleway-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		9511389426D3D3D700B02888 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		9511389526D3D3D700B02888 /* Raleway-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		9511389626D3D3D700B02888 /* Raleway-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		9511389726D3D3D700B02888 /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Light.ttf"; sourceTree = "<group>"; };
+		9511389826D3D3D700B02888 /* Raleway-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Black.ttf"; sourceTree = "<group>"; };
+		9511389926D3D3D700B02888 /* Raleway-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-BlackItalic.ttf"; sourceTree = "<group>"; };
+		9511389A26D3D3D700B02888 /* Raleway-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-LightItalic.ttf"; sourceTree = "<group>"; };
+		9511389B26D3D3D700B02888 /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
+		9511389C26D3D3D700B02888 /* Raleway.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = Raleway.zip; sourceTree = "<group>"; };
+		9511389D26D3D3D700B02888 /* Raleway-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Italic.ttf"; sourceTree = "<group>"; };
+		9511389E26D3D3D700B02888 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		9535108926CE6F7500A7EFB7 /* CustomTextMessageContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextMessageContentCell.swift; sourceTree = "<group>"; };
+		9535108B26CE705200A7EFB7 /* CustomMessageContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMessageContentCell.swift; sourceTree = "<group>"; };
+		9535108D26CE70A500A7EFB7 /* CustomLayoutSizeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLayoutSizeCalculator.swift; sourceTree = "<group>"; };
+		9535108F26CE70DE00A7EFB7 /* CustomTextLayoutSizeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextLayoutSizeCalculator.swift; sourceTree = "<group>"; };
 		95697D3926C65632000495A2 /* image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = image.swift; sourceTree = "<group>"; };
 		9579AD0126C2895800F12CE8 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		9579AD0326C291D600F12CE8 /* ChatVC+Extenion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatVC+Extenion.swift"; sourceTree = "<group>"; };
@@ -84,6 +139,8 @@
 		959CF1F826C1A9DF00D5F285 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		959CF1FA26C1B29400D5F285 /* CollectionView+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView+Addition.swift"; sourceTree = "<group>"; };
 		959CF1FD26C1B32F00D5F285 /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
+		95FD3B1526CCE3500092B68A /* MessageDateHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDateHeaderView.swift; sourceTree = "<group>"; };
+		95FD3B1726CCE4670092B68A /* MessageDateHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageDateHeaderView.xib; sourceTree = "<group>"; };
 		9E04DBF9ED19C1CBB56357B3 /* Pods-FirebaseRealTimeCharPOC-FirebaseRealTimeCharPOCUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseRealTimeCharPOC-FirebaseRealTimeCharPOCUITests.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseRealTimeCharPOC-FirebaseRealTimeCharPOCUITests/Pods-FirebaseRealTimeCharPOC-FirebaseRealTimeCharPOCUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9FA8AEE1977327CA12485855 /* Pods_FirebaseRealTimeCharPOCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseRealTimeCharPOCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC688B258764429ACF83B8D6 /* Pods_FirebaseRealTimeCharPOC_FirebaseRealTimeCharPOCUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseRealTimeCharPOC_FirebaseRealTimeCharPOCUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,10 +199,72 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9511388426D3D3D700B02888 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				9511388526D3D3D700B02888 /* spinwerad */,
+				9511388A26D3D3D700B02888 /* raleway */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		9511388526D3D3D700B02888 /* spinwerad */ = {
+			isa = PBXGroup;
+			children = (
+				9511388626D3D3D700B02888 /* spinwerad.ttf */,
+				9511388726D3D3D700B02888 /* SIL Open Font License.txt */,
+				9511388926D3D3D700B02888 /* spinweradC.ttf */,
+			);
+			path = spinwerad;
+			sourceTree = "<group>";
+		};
+		9511388A26D3D3D700B02888 /* raleway */ = {
+			isa = PBXGroup;
+			children = (
+				9511388B26D3D3D700B02888 /* Raleway-BoldItalic.ttf */,
+				9511388C26D3D3D700B02888 /* Raleway-MediumItalic.ttf */,
+				9511388D26D3D3D700B02888 /* Raleway-ThinItalic.ttf */,
+				9511388E26D3D3D700B02888 /* Raleway-ExtraLight.ttf */,
+				9511388F26D3D3D700B02888 /* SIL Open Font License.txt */,
+				9511389026D3D3D700B02888 /* Raleway-Medium.ttf */,
+				9511389126D3D3D700B02888 /* Raleway-SemiBold.ttf */,
+				9511389226D3D3D700B02888 /* Raleway-ExtraBold.ttf */,
+				9511389326D3D3D700B02888 /* Raleway-ExtraBoldItalic.ttf */,
+				9511389426D3D3D700B02888 /* Raleway-Regular.ttf */,
+				9511389526D3D3D700B02888 /* Raleway-ExtraLightItalic.ttf */,
+				9511389626D3D3D700B02888 /* Raleway-SemiBoldItalic.ttf */,
+				9511389726D3D3D700B02888 /* Raleway-Light.ttf */,
+				9511389826D3D3D700B02888 /* Raleway-Black.ttf */,
+				9511389926D3D3D700B02888 /* Raleway-BlackItalic.ttf */,
+				9511389A26D3D3D700B02888 /* Raleway-LightItalic.ttf */,
+				9511389B26D3D3D700B02888 /* Raleway-Thin.ttf */,
+				9511389C26D3D3D700B02888 /* Raleway.zip */,
+				9511389D26D3D3D700B02888 /* Raleway-Italic.ttf */,
+				9511389E26D3D3D700B02888 /* Raleway-Bold.ttf */,
+			);
+			path = raleway;
+			sourceTree = "<group>";
+		};
+		9535108826CE6F6200A7EFB7 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				9535108926CE6F7500A7EFB7 /* CustomTextMessageContentCell.swift */,
+				9535108B26CE705200A7EFB7 /* CustomMessageContentCell.swift */,
+				9535108D26CE70A500A7EFB7 /* CustomLayoutSizeCalculator.swift */,
+				9535108F26CE70DE00A7EFB7 /* CustomTextLayoutSizeCalculator.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
 		95697D3826C655F9000495A2 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
 				95697D3926C65632000495A2 /* image.swift */,
+				9579AD0B26C3F3D300F12CE8 /* NavigationController.swift */,
+				9579AD0D26C3F7DF00F12CE8 /* BaseViewController.swift */,
+				95FD3B1526CCE3500092B68A /* MessageDateHeaderView.swift */,
+				9579AD0126C2895800F12CE8 /* Constant.swift */,
+				95FD3B1726CCE4670092B68A /* MessageDateHeaderView.xib */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -175,6 +294,8 @@
 		959CF17B26C0EE2F00D5F285 /* FirebaseRealTimeCharPOC */ = {
 			isa = PBXGroup;
 			children = (
+				9511388426D3D3D700B02888 /* Font */,
+				9535108826CE6F6200A7EFB7 /* CustomCell */,
 				959CF1DF26C0F98400D5F285 /* MainFile */,
 				959CF1E826C117EA00D5F285 /* Controller */,
 				959CF1FC26C1B29900D5F285 /* Extension */,
@@ -184,9 +305,6 @@
 				959CF18826C0EE3000D5F285 /* Assets.xcassets */,
 				959CF1AF26C0EF2A00D5F285 /* Resources */,
 				959CF18D26C0EE3000D5F285 /* Info.plist */,
-				9579AD0126C2895800F12CE8 /* Constant.swift */,
-				9579AD0B26C3F3D300F12CE8 /* NavigationController.swift */,
-				9579AD0D26C3F7DF00F12CE8 /* BaseViewController.swift */,
 			);
 			path = FirebaseRealTimeCharPOC;
 			sourceTree = "<group>";
@@ -381,8 +499,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				9579AD1026C412FE00F12CE8 /* GoogleService-Info.plist in Resources */,
+				95FD3B1826CCE4670092B68A /* MessageDateHeaderView.xib in Resources */,
+				951138B326D3D3D800B02888 /* Raleway-Thin.ttf in Resources */,
+				951138B126D3D3D800B02888 /* Raleway-BlackItalic.ttf in Resources */,
+				951138AE26D3D3D800B02888 /* Raleway-SemiBoldItalic.ttf in Resources */,
+				951138A926D3D3D800B02888 /* Raleway-SemiBold.ttf in Resources */,
 				959CF18C26C0EE3000D5F285 /* LaunchScreen.storyboard in Resources */,
+				951138B526D3D3D800B02888 /* Raleway-Italic.ttf in Resources */,
+				951138A326D3D3D800B02888 /* Raleway-BoldItalic.ttf in Resources */,
+				951138AA26D3D3D800B02888 /* Raleway-ExtraBold.ttf in Resources */,
+				951138B626D3D3D800B02888 /* Raleway-Bold.ttf in Resources */,
+				951138A726D3D3D800B02888 /* SIL Open Font License.txt in Resources */,
+				9511389F26D3D3D800B02888 /* spinwerad.ttf in Resources */,
+				951138AC26D3D3D800B02888 /* Raleway-Regular.ttf in Resources */,
+				951138AD26D3D3D800B02888 /* Raleway-ExtraLightItalic.ttf in Resources */,
 				959CF18926C0EE3000D5F285 /* Assets.xcassets in Resources */,
+				951138AF26D3D3D800B02888 /* Raleway-Light.ttf in Resources */,
+				951138A426D3D3D800B02888 /* Raleway-MediumItalic.ttf in Resources */,
+				951138AB26D3D3D800B02888 /* Raleway-ExtraBoldItalic.ttf in Resources */,
+				951138A526D3D3D800B02888 /* Raleway-ThinItalic.ttf in Resources */,
+				95D52CB826D4CB6C00537F7D /* Raleway-Medium.ttf in Resources */,
+				951138B026D3D3D800B02888 /* Raleway-Black.ttf in Resources */,
+				951138A226D3D3D800B02888 /* spinweradC.ttf in Resources */,
+				951138B226D3D3D800B02888 /* Raleway-LightItalic.ttf in Resources */,
+				951138B426D3D3D800B02888 /* Raleway.zip in Resources */,
+				951138A626D3D3D800B02888 /* Raleway-ExtraLight.ttf in Resources */,
 				959CF18426C0EE2F00D5F285 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,6 +687,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				959CF18726C0EE2F00D5F285 /* FirebaseRealTimeCharPOC.xcdatamodeld in Sources */,
+				9535108C26CE705300A7EFB7 /* CustomMessageContentCell.swift in Sources */,
+				9535108E26CE70A500A7EFB7 /* CustomLayoutSizeCalculator.swift in Sources */,
 				959CF1F626C1A6C900D5F285 /* Channel.swift in Sources */,
 				959CF18126C0EE2F00D5F285 /* LoginVC.swift in Sources */,
 				959CF17D26C0EE2F00D5F285 /* AppDelegate.swift in Sources */,
@@ -555,7 +698,10 @@
 				959CF17F26C0EE2F00D5F285 /* SceneDelegate.swift in Sources */,
 				959CF1EA26C1306D00D5F285 /* ChatVC.swift in Sources */,
 				95697D3A26C65632000495A2 /* image.swift in Sources */,
+				9535109026CE70DE00A7EFB7 /* CustomTextLayoutSizeCalculator.swift in Sources */,
 				9579AD0626C2927C00F12CE8 /* ChatVC+ExtensionMedia.swift in Sources */,
+				95FD3B1626CCE3500092B68A /* MessageDateHeaderView.swift in Sources */,
+				9535108A26CE6F7500A7EFB7 /* CustomTextMessageContentCell.swift in Sources */,
 				959CF1FB26C1B29400D5F285 /* CollectionView+Addition.swift in Sources */,
 				9579AD0226C2895800F12CE8 /* Constant.swift in Sources */,
 				959CF1F926C1A9DF00D5F285 /* Message.swift in Sources */,
