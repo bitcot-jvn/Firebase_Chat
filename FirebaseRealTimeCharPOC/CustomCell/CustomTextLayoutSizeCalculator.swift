@@ -33,6 +33,9 @@ class CustomTextLayoutSizeCalculator: CustomLayoutSizeCalculator {
         case .photo(_):
             return CGSize(width: 240,
                           height: 240)
+        case .video(_):
+            return CGSize(width: 240,
+                          height: 240)
         default:
             return CGSize()
         } 
@@ -57,6 +60,8 @@ class CustomTextLayoutSizeCalculator: CustomLayoutSizeCalculator {
             return attributedText.size(consideringWidth: maxWidth)
         case .photo(_):
             return CGSize(width: 240.0, height: 240.0)
+        case .video(_):
+            return CGSize(width: 240.0, height: 240.0)
         default:
             fatalError("messageLabelSize received unhandled MessageDataType: \(message.kind)")
         }
@@ -69,7 +74,6 @@ class CustomTextLayoutSizeCalculator: CustomLayoutSizeCalculator {
                              y: self.cellMessageContentVerticalPadding / 2)
         let size = self.messageLabelSize(for: message,
                                          at: indexPath)
-        
         return CGRect(origin: origin,
                       size: size)
     }

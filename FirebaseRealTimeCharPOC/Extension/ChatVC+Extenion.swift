@@ -87,9 +87,14 @@ extension ChatVC: MessagesLayoutDelegate {
    }
     
     func cellBottomLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
+    
         if isFromCurrentSender(message: message){
-            //✓✓ //✓✓ //✓
-            return NSAttributedString(string: "✓✓", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 10), NSAttributedString.Key.foregroundColor: UIColor.white])
+            if messages[indexPath.section].read == false{
+                return NSAttributedString(string: "✓", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 10), NSAttributedString.Key.foregroundColor: UIColor.white])
+            }else{
+                return NSAttributedString(string: "✓✓", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 10), NSAttributedString.Key.foregroundColor: UIColor.white])
+            }
+           
         }else{
             return NSAttributedString(string: "", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 10), NSAttributedString.Key.foregroundColor: UIColor.darkGray])
         }
@@ -110,10 +115,11 @@ extension ChatVC: MessagesDataSource {
     func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {
         return messages[indexPath.section]
     }
-    
+
     func textCell(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UICollectionViewCell? {
         let cell = messagesCollectionView.dequeueReusableCell(CustomTextMessageContentCell.self,
                                                               for: indexPath)
+        
         cell.configure(with: message,
                        at: indexPath,
                        in: messagesCollectionView,
@@ -136,7 +142,6 @@ extension ChatVC: MessagesDataSource {
     }
 
     func configureMediaMessageImageView(_ imageView: UIImageView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
-        
         guard let msg = message as? Message, let url = msg.downloadURL else { return}
         imageView.image = #imageLiteral(resourceName: "icons8-full-image-64")
         imageView.contentMode = .scaleAspectFill
@@ -151,26 +156,32 @@ extension ChatVC: MessagesDataSource {
         DispatchQueue.main.async {
             progressBar.center = CGPoint(x: imageView.bounds.height/2, y: imageView.bounds.width / 2)
         }
-        
-        if msg.mediaType == mediaTypeIs.video.rawValue{
-            self.setImage(imgUrl: url, progressBar: progressBar)
-            self.getThumbnailFromUrl(url) { image in
-                DispatchQueue.main.async { [self] in
-                    imageView.image = image
-                    
-                    progressBar.center = CGPoint(x: imageView.bounds.height/2, y: imageView.bounds.width / 2)
-                    imageView.addSubview(setPlayBtn(imageView))
-                    progressBar.removeFromSuperview()
-                }
-            }
-        }else{
+
+        switch message.kind {
+        case .photo(_):
             self.setImage(imgUrl: url, imageType: msg.mediaType!, progressBar: progressBar) { image in
                 imageView.image = image
                 progressBar.removeFromSuperview()
-                self.setPlayBtn(imageView).removeFromSuperview()
             }
+            break
+        case .video(_):
+            self.setImage(imgUrl: url, progressBar: progressBar)
+            self.getThumbnailFromUrl(url) { image in
+                DispatchQueue.main.async {
+                    imageView.image = image
+                    progressBar.center = CGPoint(x: imageView.bounds.height/2, y: imageView.bounds.width / 2)
+                    progressBar.removeFromSuperview()
+                }
+            }
+            break
+        default:
+            break
         }
+        
     }
+    
+    
+    
     
     func getThumbnailFromUrl(_ url: URL,progressBar: MBCircularProgressBarView = MBCircularProgressBarView(), _ completion: @escaping ((_ image: UIImage?)->Void)) {
         if SDImageCache.shared.diskImageDataExists(withKey: "\(url)"){
@@ -194,7 +205,6 @@ extension ChatVC: MessagesDataSource {
         }
     }
     
-    
     func messageTopLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
         let name = message.sender.displayName
         return NSAttributedString(
@@ -204,17 +214,7 @@ extension ChatVC: MessagesDataSource {
                 .foregroundColor: UIColor(white: 0.3, alpha: 1)
             ])
     }
-    
-    func setPlayBtn(_ imageView: UIImageView) -> UIButton{
-        let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        btn.center = CGPoint(x: imageView.bounds.height/2, y: imageView.bounds.width / 2)
-        btn.backgroundColor = .clear
-        btn.setImage(UIImage(systemName: "play.circle.fill"), for: .normal)
-        btn.tintColor = .black
-        btn.layer.cornerRadius = btn.bounds.height / 2
-        return btn
-    }
-    
+
 }
 
 extension ChatVC: MessageCellDelegate{
@@ -236,8 +236,6 @@ extension ChatVC: MessageCellDelegate{
                 self.setImage(imgUrl: message.downloadURL!) { image in
                     self.imageTapped(image: image)
                 }
-                   
-                    
             }
         }
     }

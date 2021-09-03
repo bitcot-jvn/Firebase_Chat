@@ -4,10 +4,20 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ChatImageNotification.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>58</integer>
+		</dict>
+		<key>Content.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>60</integer>
+		</dict>
 		<key>FirebaseRealTimeCharPOC.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>57</integer>
+			<integer>59</integer>
 		</dict>
 		<key>Promises (Playground) 1.xcscheme</key>
 		<dict>
@@ -29,6 +39,39 @@
 			<false/>
 			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+		<key>Service.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>61</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>959CF17826C0EE2F00D5F285</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>959CF19126C0EE3000D5F285</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>959CF19C26C0EE3000D5F285</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>95C8B05B26DCB43A0076FDBD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>95C8B07126DCB44D0076FDBD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

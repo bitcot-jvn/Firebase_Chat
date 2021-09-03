@@ -11,4 +11,7 @@ import Foundation
 enum mediaTypeIs: String {
     case image
     case video
+    case text
 }
+
+

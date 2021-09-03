@@ -5,14 +5,15 @@ target 'FirebaseRealTimeCharPOC' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-	pod 'FirebaseUI'
-	pod 'FirebaseUI/Google'
- 	pod 'FirebaseUI/Auth'
-  	pod 'Firebase/Analytics'
-  	pod 'MessageKit'
-  	pod 'SDWebImage'
-	pod "ViewAnimator"
-	pod "MBCircularProgressBar"
+  pod 'FirebaseUI'
+  pod 'FirebaseUI/Google'
+  pod 'FirebaseUI/Auth'
+  pod 'Firebase/Analytics'
+  pod 'MessageKit'
+  pod 'SDWebImage'
+  pod "ViewAnimator"
+  pod "MBCircularProgressBar"
+  pod 'Firebase/Messaging'
   # Pods for FirebaseRealTimeCharPOC
   
   target 'FirebaseRealTimeCharPOCTests' do

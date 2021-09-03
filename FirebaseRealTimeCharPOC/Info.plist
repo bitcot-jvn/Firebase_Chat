@@ -2,18 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIStatusBarStyle</key>
-	<string>UIStatusBarStyleLightContent</string>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Raleway-BoldItalic.ttf</string>
-		<string>Raleway-SemiBold.ttf</string>
-		<string>Raleway-Regular.ttf</string>
-		<string>Raleway-Medium.ttf</string>
-		<string>spinwerad.ttf</string>
-	</array>
+    <key>NSAppTransportSecurity</key>
+      <dict>
+          <key>NSAllowsArbitraryLoads</key>
+          <true/>
+      </dict>
+      
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -47,6 +43,14 @@
 	<string>$(EXECUTABLE_NAME) want use camera</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>$(EXECUTABLE_NAME) want use Microphone</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Raleway-BoldItalic.ttf</string>
+		<string>Raleway-SemiBold.ttf</string>
+		<string>Raleway-Regular.ttf</string>
+		<string>Raleway-Medium.ttf</string>
+		<string>spinwerad.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -68,6 +72,10 @@
 	</dict>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>processing</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -76,6 +84,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -87,5 +97,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

@@ -66,6 +66,8 @@ class CustomLayoutSizeCalculator: CellSizeCalculator {
         switch message.kind {
         case .photo( _):
             return CGFloat()
+        case .video( _):
+            return CGFloat()
         case .text( _):
         return self.cellTopLabelSize(for: message,
                                      at: indexPath).height +
@@ -177,7 +179,7 @@ class CustomLayoutSizeCalculator: CellSizeCalculator {
     func messageContainerSize(for message: MessageType,
                               at indexPath: IndexPath) -> CGSize {
         let labelSize = self.cellMessageBottomLabelSize(for: message,
-                                               at: indexPath)
+                                                        at: indexPath)
         let width = labelSize.width +
             self.cellMessageContentHorizontalPadding +
             self.cellDateLabelHorizontalPadding
@@ -190,6 +192,8 @@ class CustomLayoutSizeCalculator: CellSizeCalculator {
             return CGSize(width: width,
                           height: height)
         case .photo(_):
+        return CGSize(width: 240, height: 240)
+        case .video(_):
         return CGSize(width: 240, height: 240)
         default:
             return CGSize()
@@ -213,7 +217,7 @@ class CustomLayoutSizeCalculator: CellSizeCalculator {
                 size.width -
                 (self.cellMessageContainerHorizontalPadding / 2)
             origin = CGPoint(x: x, y: y)
-        } else {
+        }else{
             origin = CGPoint(x: self.cellMessageContainerHorizontalPadding / 2,
                              y: y)
         }

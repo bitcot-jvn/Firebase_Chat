@@ -20,10 +20,14 @@ struct Message: MessageType {
     let sender: SenderType
     
     var kind: MessageKind {
-        if let image = downloadURL {
-            let mediaItem = ImageMediaItem(url: image)
-            return .photo(mediaItem)
-        } else {
+        if let media = downloadURL{
+            if mediaType == mediaTypeIs.image.rawValue {
+                return .photo(ImageMediaItem(url: media))
+            }else if mediaType == mediaTypeIs.video.rawValue{
+                return .video(ImageMediaItem(url: media))
+            }
+            return .photo(ImageMediaItem(url: media))
+        }else{
             return .text(content)
         }
     }
@@ -34,22 +38,24 @@ struct Message: MessageType {
     var typingUserIs: String?
     var read: Bool?
     
-    init(user: User, content: String, is_typing: Bool, typingUserIs: String,read: Bool) {
+    init(user: User, content: String, is_typing: Bool, typingUserIs: String,read: Bool, mediaType: String = "") {
         sender = Sender(senderId: user.uid, displayName: user.email!)
         self.content = content
         self.is_typing = is_typing
         self.typingUserIs = typingUserIs
         self.read = read
+        self.mediaType = mediaType
         sentDate = Date()
         id = nil
     }
     
-    init(user: User, downloadURL: URL, mediaType: String) {
+    init(user: User, downloadURL: URL, mediaType: String,read: Bool) {
         sender = Sender(senderId: user.uid, displayName: user.email!)
         self.downloadURL = downloadURL
         self.mediaType = mediaType
         self.content = ""
         self.sentDate = Date()
+        self.read = read
         id = nil
     }
     
@@ -88,11 +94,10 @@ extension Message: DatabaseRepresentation {
         var rep: [String: Any] = [
             "created": sentDate,
             "senderId": sender.senderId,
-            "senderName": sender.displayName,
-            
-            
+            "senderName": sender.displayName
         ]
         rep["is_typing"] = self.is_typing
+        rep["read"] = self.read
         rep["typingUserIs"] = self.typingUserIs
         rep["mediaType"] = self.mediaType
         if let url = downloadURL {
@@ -128,5 +133,6 @@ struct ImageMediaItem: MediaItem {
         self.url = url
         self.size = CGSize(width: 240, height: 240)
         self.placeholderImage = UIImage()
+        
     }
 }

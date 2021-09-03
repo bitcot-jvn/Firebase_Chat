@@ -84,8 +84,10 @@ extension ChatVC: UIImagePickerControllerDelegate,UINavigationControllerDelegate
             guard let url = url else {
                 return
             }
-            let message = Message(user: self.user!, downloadURL: url, mediaType: "image")
-            self.save(message)
+            let message = Message(user: self.user!, downloadURL: url, mediaType: "image", read: false)
+            self.save(message){
+              //  PushNotificationSender.instance.sendPushNotification(to: "", title: "Sender message", body: "image", data: message)
+            }
         }
     }
     
@@ -106,8 +108,10 @@ extension ChatVC: UIImagePickerControllerDelegate,UINavigationControllerDelegate
                 }
                 self.isSendingPhoto = false
                 print(url)
-                let message = Message(user: self.user!, downloadURL: url, mediaType: "video")
-                self.save(message)
+                let message = Message(user: self.user!, downloadURL: url, mediaType: "video", read: false)
+                self.save(message){
+                   // PushNotificationSender.instance.sendPushNotification(to: "", title: "Sender message", body: message.content, data: message)
+                }
             }
         }
         //here we can cancel , pause, resume use upload task

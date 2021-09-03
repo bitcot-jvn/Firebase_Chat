@@ -373,6 +373,9 @@ PODS:
     - FirebaseAnalytics (~> 8.5.0)
   - Firebase/CoreOnly (8.5.0):
     - FirebaseCore (= 8.5.0)
+  - Firebase/Messaging (8.5.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (~> 8.5.0)
   - FirebaseAnalytics (8.5.0):
     - FirebaseAnalytics/AdIdSupport (= 8.5.0)
     - FirebaseCore (~> 8.0)
@@ -453,6 +456,13 @@ PODS:
     - GoogleUtilities/Environment (~> 7.4)
     - GoogleUtilities/UserDefaults (~> 7.4)
     - PromisesObjC (< 3.0, >= 1.2)
+  - FirebaseMessaging (8.5.0):
+    - FirebaseCore (~> 8.0)
+    - FirebaseInstallations (~> 8.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.4)
+    - GoogleUtilities/Environment (~> 7.4)
+    - GoogleUtilities/Reachability (~> 7.4)
+    - GoogleUtilities/UserDefaults (~> 7.4)
   - FirebaseOAuthUI (12.0.0):
     - FirebaseAuth (~> 8.0)
     - FirebaseAuthUI
@@ -584,6 +594,7 @@ PODS:
 
 DEPENDENCIES:
   - Firebase/Analytics
+  - Firebase/Messaging
   - FirebaseUI
   - FirebaseUI/Auth
   - FirebaseUI/Google
@@ -616,6 +627,7 @@ SPEC REPOS:
     - FirebaseFirestoreUI
     - FirebaseGoogleAuthUI
     - FirebaseInstallations
+    - FirebaseMessaging
     - FirebaseOAuthUI
     - FirebasePhoneAuthUI
     - FirebaseStorage
@@ -661,6 +673,7 @@ SPEC CHECKSUMS:
   FirebaseFirestoreUI: ec98193d249eaa30ed615857b1daf475fbc75248
   FirebaseGoogleAuthUI: 6981c0c3c054367f9ccd730fbcf483504deb0a68
   FirebaseInstallations: f2bc590b291d25fb40a9a05b8281c02a881b5117
+  FirebaseMessaging: 0705ec705c21705efc51c071fba924c8e25c63e7
   FirebaseOAuthUI: fe841e8a34f844d07951003920f32bce82f805bf
   FirebasePhoneAuthUI: d84be4a096ddc19f9aace4a6ebcf80fe334f466b
   FirebaseStorage: 2c176ca64a68b45bddc3c7d4d2c0c839927ad92c
@@ -683,6 +696,6 @@ SPEC CHECKSUMS:
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   ViewAnimator: a9ceed80266e00fd435ec4fb99b2df64d580d0e4
 
-PODFILE CHECKSUM: c7ad634bee048e0cf467ca1451b0343a9418f1fa
+PODFILE CHECKSUM: 841af0514e50b52a7e57a09e5ea891555102ee2c
 
 COCOAPODS: 1.10.1

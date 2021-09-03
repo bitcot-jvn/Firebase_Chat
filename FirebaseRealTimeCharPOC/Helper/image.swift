@@ -28,13 +28,22 @@ extension UIImage {
 
 
 extension UINavigationItem {
-    func setTitle(title:String, subtitle:String) {
+    func setTitle(title:String, subtitle:String, isOnline: Bool? = nil) {
         
         let one = UILabel()
-        one.text = title
+        one.textColor = .white
+        if isOnline ?? Bool(){
+            let text = "● \(title)"
+            let range = (text as NSString).range(of: "●")
+            let attributedString = NSMutableAttributedString(string:text)
+            attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.green , range: range)
+            one.attributedText = attributedString
+        }else{
+            one.text = title
+        }
         one.font = UIFont(name: "Raleway-SemiBold", size: 17)
         one.sizeToFit()
-        one.textColor = .white
+       
         let two = UILabel()
         two.text = subtitle
         two.font = UIFont(name: "Raleway-Regular", size: 12)

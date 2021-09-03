@@ -24,7 +24,7 @@
 
 import UIKit
 
-internal extension UIView {
+ extension UIView {
     
     func fillSuperview() {
         guard let superview = self.superview else {
